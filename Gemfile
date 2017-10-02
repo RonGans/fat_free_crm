@@ -3,8 +3,8 @@ source 'https://rubygems.org'
 # Uncomment the database that you have configured in config/database.yml
 # ----------------------------------------------------------------------
 db_drivers = {
-  "mysql" => "mysql2",
-  "sqlite" => "sqlite3",
+#  "mysql" => "mysql2",
+#  "sqlite" => "sqlite3",
   "postgres" => "pg"
 }
 
@@ -68,7 +68,7 @@ group :test do
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'database_cleaner'
-  gem "acts_as_fu"
+  #gem "acts_as_fu"
   gem 'zeus' unless ENV["CI"]
   gem 'timecop'
 end
@@ -85,3 +85,6 @@ gem 'execjs'
 gem 'therubyracer', platform: :ruby unless ENV["CI"]
 gem 'nokogiri', '>= 1.6.8'
 gem 'activemodel-serializers-xml'
+
+# Below found by Karl but not compatible (4 years old)
+#gem 'ffcrm_import_leads', :git => 'http://github.com/orbitalimpact/Fat-Free-CRM-Lead-Importer'
